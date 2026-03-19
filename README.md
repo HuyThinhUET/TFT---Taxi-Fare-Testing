@@ -1,6 +1,8 @@
-Họ và tên: Trần Huy Thịnh
-Mã sinh viên: 23020162
-Lớp học: 	INT3117 2
+Họ và tên: Trần Huy Thịnh.
+
+Mã sinh viên: 23020162.
+
+Lớp học: 	INT3117 2.
 
 Giới thiệu bài toán: Tính phí taxi dựa trên quãng đường, thâm niên của khách hàng và mã giảm giá.
 1. Quãng đường:
