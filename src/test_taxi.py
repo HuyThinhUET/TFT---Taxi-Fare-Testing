@@ -48,11 +48,22 @@ def test_boundary_values(dist, sen, promo, expected):
 # 2. Test dựa trên Bảng quyết định (Decision Table)
 @pytest.mark.parametrize("dist, sen, promo, expected", [
     (3, 0.5, 0, 36000),
-    (15, 1.5, 10, 136000),
     (30, 6, 20, 195000),
+    (15, 1.5, 10, 136000),
     (25, 0.5, 90, 25500),
     (10, 7, 0, 93500),
     (4, 3, 50, 19200),
 ])
 def test_decision_table(dist, sen, promo, expected):
+    assert calculate_taxi_fare(dist, sen, promo) == expected
+
+# 3. Kiểm thử dòng điều khiển, độ đo C2.
+@pytest.mark.parametrize("dist, sen, promo, expected", [
+    (0, 0, 0, -1),
+    (5, 1, 0, 57000),
+    (15, 1.5, 0, 152000),
+    (30, 3, 0, 270000),
+    (30, 6, 0, 255000),
+])
+def test_control_flow(dist, sen, promo, expected):
     assert calculate_taxi_fare(dist, sen, promo) == expected
