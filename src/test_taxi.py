@@ -67,3 +67,14 @@ def test_decision_table(dist, sen, promo, expected):
 ])
 def test_control_flow(dist, sen, promo, expected):
     assert calculate_taxi_fare(dist, sen, promo) == expected
+
+# 4. Test All_uses coverage
+@pytest.mark.parametrize("dist, sen, promo, expected", [
+    (0, 1, 10, -1),
+    (3, 0, 10, 32400),
+    (10, 1.5, 20, 82500),
+    (25, 3, 5, 216750),
+    (8, 6, 30, 49500),
+])
+def test_all_uses_coverage(dist, sen, promo, expected):
+    assert calculate_taxi_fare(dist, sen, promo) == expected
